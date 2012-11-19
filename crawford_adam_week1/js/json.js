@@ -1,3 +1,9 @@
+/*
+ * Adam Crawford
+ * MIU 1212
+ * Week 1 
+ * 11/17/2012
+*/
 var json = {
     "match1": {
         "gDate": ["Game Date: ", "2012-10-27"],

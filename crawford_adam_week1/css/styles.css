@@ -1,3 +1,9 @@
+/*
+ * Adam Crawford
+ * MIU 1212
+ * Week 1 
+ * 11/17/2012
+*/
 #add { 
 	background: url(../img/field.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -8,8 +14,6 @@ body {
     color: #002230;
 }
 h1, h2 {
-	/* color: #ffff56;
-    text-shadow: 2px 2px #ff0000; */
     margin: 0px;
 }
 form ul {

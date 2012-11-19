@@ -1,8 +1,9 @@
-//Adam Crawford
-//MIU 1212
-//Week 1 
-//11/17/2012
-
+/*
+ * Adam Crawford
+ * MIU 1212
+ * Week 1 
+ * 11/17/2012
+*/
 document.addEventListener("DOMContentLoaded", function(){
 
 
