@@ -10,10 +10,20 @@
     width: auto;
 }
 #feature { 
-	background: url(../img/fieldlights-small.jpg) no-repeat;
+	position: relative;
 	height: 216px;
 	color: goldenrod;
 	text-shadow: 1px 1px navy;
+}
+#featfront {
+	position: absolute;
+	z-index: 2;
+}
+#featback {
+		position: absolute;
+	 	height: 216px;
+	 	z-index: 1;
+	 	opacity: 0.85;
 }
 #add body {
     font-family: "Arial New", Arial, sans-serif;
@@ -24,7 +34,7 @@
 	color: goldenrod;
 	text-shadow: 1px 1px black;
 	float: right;
-
+	margin-top: -5px;
 }
 form ul {
     list-style: none;
