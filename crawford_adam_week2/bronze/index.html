@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <!--
+    Adam Crawford
+    MIU 1212
+	Week 1
+    11/14/2012
+    -->
+<html>
+    <head>
+
+        <!--  Mobile viewport optimized: j.mp/bplateviewport
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+	
+        <meta charset="utf-8" />
+        <meta name="description" content="Soccer Schdeuler" />
+        <meta name="keyword" content="soccer, game, schedule, assignments, sport, referee, match, contest" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/original.css" />
+		<script src="js/libs/modernizr.custom.min.js"></script>
+        <title>Soccer Scheduler</title>
+    </head>
+    <body>
+    	<div data-role="page">
+	        <div data-role="header">
+	            <hgroup>
+	                <h1>Soccer Scheduler</h1>
+	                <h2>Create weekly schedules for teams and referees</h2>
+		        </hgroup>
+			</div>
+	        <div data-role="conent">
+				<label for="search">Please enter your search criteria: </label>
+				<input type="search" id="search" placeholder="Search" />
+	        	<a href="#" data-role="button" data-theme="a">Add New Match</a>
+				<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right">
+					<div data-role="collapsible" data-collapsed="true">
+						<h2>Home Team</h2>
+						<ul data-role="listview" data-autodividers="true" data-filter="true" id="homeList">
+							
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h2>Away Team</h2>
+						<ul data-role="listview" data-autodividers="true" data-filter="true" id="awayList">
+							
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h2>Date and Time</h2>
+						<ul data-role="listview" id="dateTimeList">
+							
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h2>Field</h2>
+						<ul data-role="listview" id="fieldList">
+							
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h2>Gender and Age</h2>
+						<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right">
+							<div data-role="collapsible">
+								<h3>Boys</h3>
+								<ul data-role="listview">
+									<li><a href="additem.html" data-ajax="false">U6</a></li>
+									<li><a href="additem.html" data-ajax="false">U8</a></li>
+									<li><a href="additem.html" data-ajax="false">U10</a></li>
+									<li><a href="additem.html" data-ajax="false">U12</a></li>
+									<li><a href="additem.html" data-ajax="false">U14</a></li>
+									<li><a href="additem.html" data-ajax="false">U18</a></li>
+								</ul>
+							</div>
+							<div data-role="collapsible">
+								<h3>Girls</h3>
+								<ul data-role="listview">
+									<li><a href="additem.html" data-ajax="false">U6</a></li>
+									<li><a href="additem.html" data-ajax="false">U8</a></li>
+									<li><a href="additem.html" data-ajax="false">U10</a></li>
+									<li><a href="additem.html" data-ajax="false">U12</a></li>
+									<li><a href="additem.html" data-ajax="false">U14</a></li>
+									<li><a href="additem.html" data-ajax="false">U18</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    </body>
+</html>
