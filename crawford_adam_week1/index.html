@@ -3,29 +3,50 @@
     Adam Crawford
     MIU 1212
 	Week 1
-    11/14/2012
+    11/25/2012
     -->
 <html>
     <head>
         <!-- Meta data -->
+                <!--  Mobile viewport optimized: j.mp/bplateviewport  -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
         <meta charset="utf-8" />
         <meta name="description" content="Soccer Schdeuler" />
         <meta name="keyword" content="soccer, game, schedule, assignments, sport, referee, match, contest" />
         <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" href="css/styles.css" />
+		<script src="js/libs/modernizr.custom.min.js"></script>
         <title>Soccer Scheduler</title>
     </head>
     <body id="index">
-        <header>
-            <hgroup>
-                <h1>Soccer Scheduler</h1>
-                <h2>Create weekly schedules for teams and referees</h2>
-            </hgroup>
-        </header>
-        <div id='links'>
-            <a href=additem.html><img src="img/addNew.png"></a>
-            <a href=additem.html#show><img src="img/display.png"></a>
-        </div>
+       <div data-role="page">
+	        <div data-role="header">
+	            <h1>Scheduler Home</h1>
+			</div> <!-- Header -->
+	        <div data-role="conent">
+	        	<div id="feature">
+	        		<h2>Soccer Scheduling, Simplified</h2>
+	        		<h3>Discover what you've been missing with other systems. Get started now!</h3>
+	        		<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-ajax="false">Add a Match</a>
+	        	</div>
+		        <div id="search">
+					<input type="search" id="search" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true" data-iconpos="notext">Search</a>
+				</div>
+				<div id="browse">
+					
+				</div>
+	        </div> <!-- Content -->
+	        <div data-role="footer" data-position="fixed">
+	        	<h4>Footer</h4>
+	        </div> <!-- Footer -->
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </body>
 </html>

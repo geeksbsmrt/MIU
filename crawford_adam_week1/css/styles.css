@@ -9,12 +9,22 @@
 	-webkit-background-size: cover;
     width: auto;
 }
-body {
+#feature { 
+	background: url(../img/fieldlights-small.jpg) no-repeat;
+	height: 216px;
+	color: goldenrod;
+	text-shadow: 1px 1px navy;
+}
+#add body {
     font-family: "Arial New", Arial, sans-serif;
     color: #002230;
 }
-h1, h2 {
-    margin: 0px;
+#addBtn {
+	background: maroon;
+	color: goldenrod;
+	text-shadow: 1px 1px black;
+	float: right;
+
 }
 form ul {
     list-style: none;
@@ -49,15 +59,8 @@ legend {
 	background: red;
 	color: white;
 }
-#index {
-	background: url(../img/fieldlights.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	text-align: center;
-	color: #C7C09C;
-	text-shadow: 2px 2px #363329;
-}
-#index img {
-	height: 100px;
+.ui-input-search {
+    display: inline-block;
 }
 .noListStyle {
 	list-style: none;
