@@ -32,10 +32,10 @@
 	        		<h2>Soccer Scheduling, Simplified</h2>
 	        		<p>Discover how easy it is. Get started now!</p>
 	        		<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false">Add a Match</a>
-	        	</div><!-- Feature -->
+	        	</div><!-- End Index Feature -->
 		        <div id="search">
 					<input type="search" id="searchbox" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true">Search</a>
-				</div>
+				</div> <!-- End Index search -->
 				<div id="browse">
 					<ul data-role="listview">
 						<li data-role="list-divider">Browse the schedule by:</li>
@@ -45,24 +45,34 @@
 						<li><a href="#teams">Teams</a></li>
 						<li><a href="#refs">Referees</a></li>
 					</ul>
-				</div>
-	        </div> <!-- Content -->
-	    </div> <!-- Index -->
+				</div> <!-- End Index Browse -->
+	        </div> <!-- End Index Content -->
+	    </div> <!-- End Index -->
 	    <div data-role="page" id="dt">
-	    	
-	    </div> <!-- dt -->
+	    	<div data-role="content">
+	    		<!-- parse LS, add dates as li's, make subLI for times, clicking times will display all matches for that date/time -->
+	    	</div> <!-- end dt content -->
+	    </div> <!-- end dt -->
 	    <div data-role="page" id="field">
-	    	
-	    </div> <!-- field -->
+	    	<div data-role="content">
+	    		<!-- parse LS, add fields as li's, clicking li will show all matches on that field soonest first -->
+	    	</div> <!-- end field content -->
+	    </div> <!-- end field -->
 		<div data-role="page" id="ga">
-	    	
-	    </div> <!-- ga -->
+	    	<div data-role="content">
+	    		<!-- parse LS, add genders as LI's, add ages as subLI's, clicking age will display all matches soonest first -->
+	    	</div> <!-- end ga content -->
+	    </div> <!-- end ga -->
 	    <div data-role="page" id="teams">
-	    	
-	    </div> <!-- teams -->
+	    	<div data-role="content">
+	    		<!-- parse LS, add teams with icon, clicking team will show all matches soonest first -->
+	    	</div> <!-- end teams content -->
+	    </div> <!-- end teams -->
 	    <div data-role="page" id="refs">
-	    	
-	    </div> <!-- refs -->
+	    	<div data-role="content">
+	    		<!-- parse LS, add referees, clicking ref will display all matches soonest first -->
+	    	</div><!-- end refs content -->
+	    </div> <!-- end refs -->
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </body>
