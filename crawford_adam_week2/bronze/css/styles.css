@@ -4,17 +4,35 @@
  * Week 1 
  * 11/17/2012
 */
+
+#feature { 
+	background: url(../img/field.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	width: auto;
+	margin-top: -20px;
+	color: goldenrod;
+	text-shadow: 1px 1px navy;
+	text-align: center;
+}
+#feature p {
+	font-weight: bold;
+}
+#addBtn {
+	background: maroon;
+	color: goldenrod;
+	text-shadow: 1px 1px black;
+}
+.ui-input-search {
+    display: inline-block;
+}
 #add { 
 	background: url(../img/field.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
     width: auto;
 }
-body {
+#add body {
     font-family: "Arial New", Arial, sans-serif;
     color: #002230;
-}
-h1, h2 {
-    margin: 0px;
 }
 form ul {
     list-style: none;
@@ -48,16 +66,6 @@ legend {
 #errors {
 	background: red;
 	color: white;
-}
-#index {
-	background: url(../img/fieldlights.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	text-align: center;
-	color: #C7C09C;
-	text-shadow: 2px 2px #363329;
-}
-#index img {
-	height: 100px;
 }
 .noListStyle {
 	list-style: none;
