@@ -25,32 +25,44 @@
 		<script src="js/libs/modernizr.custom.min.js"></script>
         <title>Soccer Scheduler</title>
     </head>
-    <body id="index">
-       <div data-role="page">
-	        <div data-role="header">
-	            <h1>Scheduler Home</h1>
-			</div> <!-- Header -->
+    <body>
+       <div data-role="page" id="index">
 	        <div data-role="conent">
 	        	<div id="feature">
-	        		<div id="featback">
-	        			<img src="img/fieldlights-small.jpg" />
-	        		</div>
-	        		<div id="featfront">
-	        			<h2>Soccer Scheduling, Simplified</h2>
-	        			<h3>Discover what you've been missing with other systems.<br> Get started now!</h3>
-	        			<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-ajax="false">Add a Match</a>
-	        		</div>
-	        	</div>
+	        		<h2>Soccer Scheduling, Simplified</h2>
+	        		<p>Discover how easy it is. Get started now!</p>
+	        		<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false">Add a Match</a>
+	        	</div><!-- Feature -->
 		        <div id="search">
-					<input type="search" id="searchbox" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true" data-iconpos="notext">Search</a>
+					<input type="search" id="searchbox" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true">Search</a>
 				</div>
 				<div id="browse">
-					
+					<ul data-role="listview">
+						<li data-role="list-divider">Browse the schedule by:</li>
+						<li><a href="#dt">Date and Time</a></li>
+						<li><a href="#field">Field</a></li>
+						<li><a href="#ga">Gender and Age</a></li>
+						<li><a href="#teams">Teams</a></li>
+						<li><a href="#refs">Referees</a></li>
+					</ul>
 				</div>
 	        </div> <!-- Content -->
-	        <div data-role="footer" data-position="fixed">
-	        	<h4>Footer</h4>
-	        </div> <!-- Footer -->
+	    </div> <!-- Index -->
+	    <div data-role="page" id="dt">
+	    	
+	    </div> <!-- dt -->
+	    <div data-role="page" id="field">
+	    	
+	    </div> <!-- field -->
+		<div data-role="page" id="ga">
+	    	
+	    </div> <!-- ga -->
+	    <div data-role="page" id="teams">
+	    	
+	    </div> <!-- teams -->
+	    <div data-role="page" id="refs">
+	    	
+	    </div> <!-- refs -->
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </body>
