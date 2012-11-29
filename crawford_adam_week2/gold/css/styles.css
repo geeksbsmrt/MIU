@@ -12,7 +12,9 @@
 	margin-top: -20px;
 	color: goldenrod;
 	text-shadow: 1px 1px navy;
-	text-align: center;
+}
+#feature h2 {
+	margin-bottom: -10px;
 }
 #feature p {
 	font-weight: bold;
@@ -21,9 +23,16 @@
 	background: maroon;
 	color: goldenrod;
 	text-shadow: 1px 1px black;
+	margin: 0px 15px 20px 185px;
 }
-.ui-input-search {
+.ui-listview-filter {
+	margin: -15px 0px 0px 0px;
+}
+/*.ui-input-search {
     display: inline-block;
+}*/
+#browse {
+	margin: 0px 15px;
 }
 #add { 
 	background: url(../img/field.jpg) no-repeat center center fixed; 
