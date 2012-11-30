@@ -151,8 +151,14 @@
        		</div>
 	    	<div data-role="content" id="teambrowse">
 	    		<!-- parse LS, add teams with icon, clicking team will show all matches soonest first -->
-	    		<h2>404 Page not found</h2>
-	    		<p>This page is not available at this time.</p>
+	    		<ul data-role="listview" id="teamlist" data-inset="true" data-filter="true" data-autodividers="true">
+	    			<li><a href="#chargers"><img src="img/chargers.jpg" class="ui-li-icon">Clearwater Chargers</a></li>
+		    		<li><a href="#lfc"><img src="img/lfc.jpg" class="ui-li-icon">Lakeland FC</a></li>
+		    		<li><a href="#fury"><img src="img/LW Fury.png" class="ui-li-icon">Lake Wales Fury</a></li>
+		    		<li><a href="#ocu"><img src="img/ocu.png" class="ui-li-icon">Orlando City United</a></li>
+		    		<li><a href="#tbu"><img src="img/tbu.png" class="ui-li-icon">Tampa Bay United</a></li>
+		    		<li><a href="#kicks"><img src="img/WHkick.jpeg" class="ui-li-icon">Winter Haven Kicks</a></li>
+	    		</ul>
 	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
 					<div data-role="navbar">
 						<ul>
@@ -549,6 +555,240 @@
 				</div><!-- /footer -->
 	    	</div> <!-- end about content -->
 	    </div> <!-- end about -->
+	    <div data-role="page" id="lfc" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Lakeland FC</h1>
+       		</div>
+	    	<div data-role="content" id="lfclist">
+	    		<!-- parse LS, add LFC games soonest first -->
+	    		<ul data-role="listview" data-inset="true" data-filter="true">
+	    			<li><h2>12/1/12 8:00 U12 Boys</h2>
+	    				<p>LFC vs Clearwater Chargers</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 8:00 AM</li>
+		    				<li>Game Field: 1A</li>
+		    				<li>Game Age: U12</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Clearwater Chargers</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 9:30 U14 Girls</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 9:30 AM</li>
+		    				<li>Game Field: 3</li>
+		    				<li>Game Age: U14</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 11:00 U10 Boys</h2>
+	    				<p>Lake Wales Fury vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 11:00 AM</li>
+		    				<li>Game Field: 2B</li>
+		    				<li>Game Age: U10</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lake Wales Fury</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 12:30 U8 Boys</h2>
+	    				<p>Clearwater Chargers vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 12:30 PM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U8</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Clearwater Chargers</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 2:00 U18 Girls</h2>
+	    				<p>LFC vs Winter Haven Kicks</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 2:00 PM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U18</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Winter Haven Kicks</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 4:00 U12 Boys</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 4:00 PM</li>
+		    				<li>Game Field: 1A</li>
+		    				<li>Game Age: U12</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 5:30 U14 Girls</h2>
+	    				<p>LFC vs Winter Haven Kicks</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 5:30 PM</li>
+		    				<li>Game Field: 3</li>
+		    				<li>Game Age: U14</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Winter Haven Kicks</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 8:00 U10 Boys</h2>
+	    				<p>Orlando City United vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 8:00 AM</li>
+		    				<li>Game Field: 2B</li>
+		    				<li>Game Age: U10</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Orlando City United</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 9:30 U8 Boys</h2>
+	    				<p>Lake Wales Fury vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 9:30 AM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U8</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lake Wales Fury</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 11:00 U18 Girls</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 11:00 AM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U18</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end lfc content -->
+	    </div> <!-- end lfc -->
+	    <div data-role="page" id="kicks" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Winter Haven Kicks</h1>
+       		</div>
+	    	<div data-role="content" id="kickslist">
+	    		<!-- parse LS, add kicks games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end kicks content -->
+	    </div> <!-- end kicks -->
+	    <div data-role="page" id="tbu" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Tampa Bay United</h1>
+       		</div>
+	    	<div data-role="content" id="tbulist">
+	    		<!-- parse LS, add TBU games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end tbu content -->
+	    </div> <!-- end tbu -->
+	    <div data-role="page" id="chargers" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Clearwater Chargers</h1>
+       		</div>
+	    	<div data-role="content" id="chargerslist">
+	    		<!-- parse LS, add chargers games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end chargers content -->
+	    </div> <!-- end chargers -->
+	    <div data-role="page" id="fury" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Lake Wales Fury</h1>
+       		</div>
+	    	<div data-role="content" id="furylist">
+	    		<!-- parse LS, add fury games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end fury content -->
+	    </div> <!-- end fury -->
+	    <div data-role="page" id="ocu" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Orlando City United</h1>
+       		</div>
+	    	<div data-role="content" id="oculist">
+	    		<!-- parse LS, add ocu games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end ocu content -->
+	    </div> <!-- end ocu -->
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </body>
