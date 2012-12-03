@@ -34,7 +34,7 @@
 	        	<div id="feature">
 	        		<h2>Soccer Scheduling, Simplified</h2>
 	        		<p>Discover how easy it is. Get started now!</p>
-	        		<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false">Add a Match</a>
+	        		<a href="#additem" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false">Add a Match</a>
 	        	</div><!-- End Home Feature -->
 					<!-- <div id="search">
 					<input type="search" id="searchbox" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true">Search</a>
@@ -789,6 +789,30 @@
 				</div><!-- /footer -->
 	    	</div> <!-- end ocu content -->
 	    </div> <!-- end ocu -->
+	    <div data-role="page" id="additem" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Add New Match</h1>
+       		</div>
+	    	<div data-role="content" id="add">
+	    		<div id="topNav">
+            		<a href="#" id="display">Display Schedule</a>
+            		<a href="#" id="clear">Clear Schedule</a>
+            		<a href="additem.html" id="addNew" style="display: none;">Add New Match</a>
+        		</div>
+        		<div id="errordiv">
+	    			<ul id="errors"></ul>
+	    		</div>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 1a content -->
+	    </div> <!-- end 1a -->
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </body>
