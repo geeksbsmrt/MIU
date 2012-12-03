@@ -1,0 +1,89 @@
+/*
+ * Adam Crawford
+ * MIU 1212
+ * Week 1 
+ * 11/17/2012
+*/
+
+#feature { 
+	background: url(../img/field.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	width: auto;
+	margin-top: -20px;
+	color: goldenrod;
+	text-shadow: 1px 1px navy;
+}
+#feature h2 {
+	margin-bottom: -10px;
+}
+#feature p {
+	font-weight: bold;
+}
+#addBtn {
+	background: maroon;
+	color: goldenrod;
+	text-shadow: 1px 1px black;
+	margin: 0px 15px 20px 185px;
+}
+.ui-listview-filter {
+	margin: -15px 0px 0px 0px;
+}
+/*.ui-input-search {
+    display: inline-block;
+}*/
+#browse {
+	margin: 0px 15px;
+}
+#add { 
+	background: url(../img/field.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+    width: auto;
+}
+#add body {
+    font-family: "Arial New", Arial, sans-serif;
+    color: #002230;
+}
+form ul {
+    list-style: none;
+}
+form input, select {
+	display: block;
+}
+form input[type=checkbox] {
+	display: inline;
+}
+form textarea {
+	display: block;
+}
+#boys, #girls {
+	display: inline;
+}
+.required {
+    outline: red solid 2px;
+}
+fieldset {
+    border: hidden;
+    padding: 0px;
+}
+legend {
+    font-weight: bold;
+}
+#data > ul > li {
+	margin-bottom: 25px;
+	list-style: none;
+}
+#errors {
+	background: red;
+	color: white;
+}
+.noListStyle {
+	list-style: none;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+.slider {
+	display: inline;
+}
+a:link {color: #034661;}
+a:visited {color: #911514;}

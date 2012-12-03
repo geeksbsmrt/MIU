@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+    <!--
+    Adam Crawford
+    MIU 1212
+	Week 2 - Gold
+    11/27/2012
+    -->
+<html>
+    <head>
+        <!-- Meta data -->
+                <!--  Mobile viewport optimized: j.mp/bplateviewport  -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+        <meta charset="utf-8" />
+        <meta name="description" content="Soccer Schdeuler" />
+        <meta name="keyword" content="soccer, game, schedule, assignments, sport, referee, match, contest" />
+        <meta name="robots" content="index, follow" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+		<script src="js/libs/modernizr.custom.min.js"></script>
+        <title>Soccer Scheduler - Gold</title>
+    </head>
+    <body>
+       <div data-role="page" id="home">
+       		<div data-role="header">
+       			<h1>Home</h1>
+       		</div>
+	        <div data-role="conent">
+	        	<div id="feature">
+	        		<h2>Soccer Scheduling, Simplified</h2>
+	        		<p>Discover how easy it is. Get started now!</p>
+	        		<a href="additem.html" data-role="button" id="addBtn" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-ajax="false">Add a Match</a>
+	        	</div><!-- End Home Feature -->
+					<!-- <div id="search">
+					<input type="search" id="searchbox" data-mini="true" placeholder="Search the schedule" /><a href="#" data-role="button" data-icon="search" data-inline="true" data-mini="true">Search</a>
+				</div> --><!-- End Home search -->
+				<div id="browse">
+					<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Filter Catagories...">
+						<li data-role="list-divider">Browse the schedule by:</li>
+						<li><a href="#dt">Date and Time</a></li>
+						<li><a href="#field">Field</a></li>
+						<li><a href="#ga">Gender and Age</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#ref">Referee</a></li>
+					</ul>
+				</div> <!-- End Home Browse -->
+	        </div> <!-- End Home Content -->
+	        <div data-role="footer" data-id="myfooter" data-position="fixed">		
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+						<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+						<li><a href="#about">About</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+	    </div> <!-- End Home -->
+	    <div data-role="page" id="dt" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Date and Time</h1>
+       		</div>
+	    	<div data-role="content" id="dtbrowse">
+	    		<!-- parse LS, add dates as li's, make subLI for times, clicking times will display all matches for that date/time -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end dt content -->
+	    </div> <!-- end dt -->
+	    <div data-role="page" id="field" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field</h1>
+       		</div>
+	    	<div data-role="content" id="fieldbrowse">
+	    		<!-- parse LS, add fields as li's, clicking li will show all matches on that field soonest first -->
+	    		<ul data-role="listview" data-inset="true" id="fieldlist" data-filter="true">
+	    			<li><a href="#1a">1A</a></li>
+	    			<li><a href="#1b">1B</a></li>
+	    			<li><a href="#2a">2A</a></li>
+	    			<li><a href="#2b">2B</a></li>
+	    			<li><a href="#field3">3</a></li>
+	    			<li><a href="#field4">4</a></li>
+	    		</ul>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end field content -->
+	    </div> <!-- end field -->
+		<div data-role="page" id="ga" data-add-back-btn="true">
+			<div data-role="header">
+       			<h1>Gender and Age</h1>
+       		</div>
+	    	<div data-role="content"  id="gabrowse">
+	    		<!-- parse LS, add genders as LI's, add ages as subLI's, clicking age will display all matches soonest first -->
+	    		<div data-role="collapsible-set">
+	    			<div data-role="collapsible" data-collapsed="true">
+	    				<h2>Boys</h2>
+	    				<ul data-role="listview" id="gab">
+	    					<li><a href="#6b">U6</a></li>
+	    					<li><a href="#8b">U8</a></li>
+	    					<li><a href="#10b">U10</a></li>
+	    					<li><a href="#12b">U12</a></li>
+	    					<li><a href="#14b">U14</a></li>
+	    					<li><a href="#18b">U18</a></li>
+	    				</ul>
+	    			</div>
+	    			<div data-role="collapsible" data-collapsed="true">
+	    				<h2>Girls</h2>
+	    				<ul data-role="listview" id="gag">
+	    					<li><a href="#6g">U6</a></li>
+	    					<li><a href="#8g">U8</a></li>
+	    					<li><a href="#10g">U10</a></li>
+	    					<li><a href="#12g">U12</a></li>
+	    					<li><a href="#14g">U14</a></li>
+	    					<li><a href="#18g">U18</a></li>
+	    				</ul>
+	    			</div>
+	    		</div>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end ga content -->
+	    </div> <!-- end ga -->
+	    <div data-role="page" id="team" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Team</h1>
+       		</div>
+	    	<div data-role="content" id="teambrowse">
+	    		<!-- parse LS, add teams with icon, clicking team will show all matches soonest first -->
+	    		<ul data-role="listview" id="teamlist" data-inset="true" data-filter="true" data-autodividers="true">
+	    			<li><a href="#chargers"><img src="img/chargers.jpg" class="ui-li-icon">Clearwater Chargers</a></li>
+		    		<li><a href="#lfc"><img src="img/lfc.jpg" class="ui-li-icon">Lakeland FC</a></li>
+		    		<li><a href="#fury"><img src="img/LW Fury.png" class="ui-li-icon">Lake Wales Fury</a></li>
+		    		<li><a href="#ocu"><img src="img/ocu.png" class="ui-li-icon">Orlando City United</a></li>
+		    		<li><a href="#tbu"><img src="img/tbu.png" class="ui-li-icon">Tampa Bay United</a></li>
+		    		<li><a href="#kicks"><img src="img/WHkick.jpeg" class="ui-li-icon">Winter Haven Kicks</a></li>
+	    		</ul>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end team content -->
+	    </div> <!-- end team -->
+	    <div data-role="page" id="ref" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Referee</h1>
+       		</div>
+	    	<div data-role="content"  id="refbrowse">
+	    		<!-- parse LS, add referees, clicking ref will display all matches soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end ref content -->
+	    </div> <!-- end ref -->
+	    <div data-role="page" id="1a" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 1A</h1>
+       		</div>
+	    	<div data-role="content" id="1alist">
+	    		<!-- parse LS, add games on 1a soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 1a content -->
+	    </div> <!-- end 1a -->
+	    <div data-role="page" id="1b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 1B</h1>
+       		</div>
+	    	<div data-role="content" id="1blist">
+	    		<!-- parse LS, add games on 1b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 1b content -->
+	    </div> <!-- end 1b -->
+	    <div data-role="page" id="2a" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 2A</h1>
+       		</div>
+	    	<div data-role="content" id="2alist">
+	    		<!-- parse LS, add games on 2a soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 2a content -->
+	    </div> <!-- end 2a -->
+	    <div data-role="page" id="2b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 2B</h1>
+       		</div>
+	    	<div data-role="content" id="2blist">
+	    		<!-- parse LS, add games on 2b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 2b content -->
+	    </div> <!-- end 2b -->
+	    <div data-role="page" id="field3" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 3</h1>
+       		</div>
+	    	<div data-role="content" id="3list">
+	    		<!-- parse LS, add games on 3 soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 3 content -->
+	    </div> <!-- end 3 -->
+	    <div data-role="page" id="field4" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Field 4</h1>
+       		</div>
+	    	<div data-role="content" id="4list">
+	    		<!-- parse LS, add games on 4 soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end 4 content -->
+	    </div> <!-- end 4 -->
+	    <div data-role="page" id="6b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U6 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="6blist">
+	    		<!-- parse LS, add 6b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 6b content -->
+	    </div> <!-- end 6b -->
+	    <div data-role="page" id="8b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U8 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="8blist">
+	    		<!-- parse LS, add 8b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 8b content -->
+	    </div> <!-- end 8b -->
+	    <div data-role="page" id="10b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U10 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="10blist">
+	    		<!-- parse LS, add 10b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 10b content -->
+	    </div> <!-- end 10b -->
+	    <div data-role="page" id="12b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U12 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="12blist">
+	    		<!-- parse LS, add 12b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 12b content -->
+	    </div> <!-- end 12b -->
+	    <div data-role="page" id="14b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U14 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="14blist">
+	    		<!-- parse LS, add 14b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 14b content -->
+	    </div> <!-- end 14b -->
+	    <div data-role="page" id="18b" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U18 Boys</h1>
+       		</div>
+	    	<div data-role="content"  id="18blist">
+	    		<!-- parse LS, add 18b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 18b content -->
+	    </div> <!-- end 18b -->
+	    <div data-role="page" id="6g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U6 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="6glist">
+	    		<!-- parse LS, add 6g soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 6g content -->
+	    </div> <!-- end 6g -->
+	    <div data-role="page" id="8g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U8 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="8glist">
+	    		<!-- parse LS, add 8g soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 8g content -->
+	    </div> <!-- end 8g -->
+	    <div data-role="page" id="10g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U10 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="10glist">
+	    		<!-- parse LS, add 10b soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 10g content -->
+	    </div> <!-- end 10g -->
+	    <div data-role="page" id="12g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U12 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="12glist">
+	    		<!-- parse LS, add 12g soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 12g content -->
+	    </div> <!-- end 12g -->
+	    <div data-role="page" id="14g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U14 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="14glist">
+	    		<!-- parse LS, add 14g soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 14g content -->
+	    </div> <!-- end 14g -->
+	    <div data-role="page" id="18g" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>U18 Girls</h1>
+       		</div>
+	    	<div data-role="content"  id="18glist">
+	    		<!-- parse LS, add 18g soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	    		<div data-role="footer" data-id="myfooter" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div><!-- end 18g content -->
+	    </div> <!-- end 18g -->
+	    <div data-role="page" id="about" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>About</h1>
+       		</div>
+	    	<div data-role="content" id="aboutcontent">
+	    		<ul data-role="listview" data-inset="true">
+	    			<li data-role="list-divider">This Application's:</li>
+	    			<li><a href="http://geeksbsmrt.github.com/MIU/crawford_adam_week2/gold/index.html">GH-Pages</a></li>
+	    			<li><a href="https://github.com/geeksbsmrt/MIU/tree/master/crawford_adam_week2/gold">GH Source</a></li>
+	    			<li data-role="list-divider">Bronze Application's:</li>
+					<li><a href="http://geeksbsmrt.github.com/MIU/crawford_adam_week2/bronze/index.html">GH-Pages</a></li>
+	    			<li><a href="https://github.com/geeksbsmrt/MIU/tree/master/crawford_adam_week2/bronze">GH Source</a></li>
+	    		</ul>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../bronze/index.html" data-ajax="false">Bronze</a></li>
+							<li><a href="#about" class="ui-btn-active ui-state-persist">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end about content -->
+	    </div> <!-- end about -->
+	    <div data-role="page" id="lfc" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Lakeland FC</h1>
+       		</div>
+	    	<div data-role="content" id="lfclist">
+	    		<!-- parse LS, add LFC games soonest first -->
+	    		<ul data-role="listview" data-inset="true" data-filter="true">
+	    			<li><h2>12/1/12 8:00 U12 Boys</h2>
+	    				<p>LFC vs Clearwater Chargers</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 8:00 AM</li>
+		    				<li>Game Field: 1A</li>
+		    				<li>Game Age: U12</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Clearwater Chargers</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 9:30 U14 Girls</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 9:30 AM</li>
+		    				<li>Game Field: 3</li>
+		    				<li>Game Age: U14</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 11:00 U10 Boys</h2>
+	    				<p>Lake Wales Fury vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 11:00 AM</li>
+		    				<li>Game Field: 2B</li>
+		    				<li>Game Age: U10</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lake Wales Fury</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 12:30 U8 Boys</h2>
+	    				<p>Clearwater Chargers vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 12:30 PM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U8</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Clearwater Chargers</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 2:00 U18 Girls</h2>
+	    				<p>LFC vs Winter Haven Kicks</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 2:00 PM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U18</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Winter Haven Kicks</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 4:00 U12 Boys</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 4:00 PM</li>
+		    				<li>Game Field: 1A</li>
+		    				<li>Game Age: U12</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/1/12 5:30 U14 Girls</h2>
+	    				<p>LFC vs Winter Haven Kicks</p>
+	    				<ul>
+	    					<li>Game Date: 12/1/2012</li>
+		    				<li>Game Time: 5:30 PM</li>
+		    				<li>Game Field: 3</li>
+		    				<li>Game Age: U14</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Winter Haven Kicks</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 8:00 U10 Boys</h2>
+	    				<p>Orlando City United vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 8:00 AM</li>
+		    				<li>Game Field: 2B</li>
+		    				<li>Game Age: U10</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Orlando City United</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 9:30 U8 Boys</h2>
+	    				<p>Lake Wales Fury vs LFC</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 9:30 AM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U8</li>
+		    				<li>Game Gender: Boys</li>
+		    				<li>Home Team: Lake Wales Fury</li>
+		    				<li>Away Team: Lakeland FC</li>
+	    				</ul>
+	    			</li>
+	    			<li><h2>12/2/12 11:00 U18 Girls</h2>
+	    				<p>LFC vs Tampa Bay United</p>
+	    				<ul>
+	    					<li>Game Date: 12/2/2012</li>
+		    				<li>Game Time: 11:00 AM</li>
+		    				<li>Game Field: 2A</li>
+		    				<li>Game Age: U18</li>
+		    				<li>Game Gender: Girls</li>
+		    				<li>Home Team: Lakeland FC</li>
+		    				<li>Away Team: Tampa Bay United</li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end lfc content -->
+	    </div> <!-- end lfc -->
+	    <div data-role="page" id="kicks" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Winter Haven Kicks</h1>
+       		</div>
+	    	<div data-role="content" id="kickslist">
+	    		<!-- parse LS, add kicks games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end kicks content -->
+	    </div> <!-- end kicks -->
+	    <div data-role="page" id="tbu" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Tampa Bay United</h1>
+       		</div>
+	    	<div data-role="content" id="tbulist">
+	    		<!-- parse LS, add TBU games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end tbu content -->
+	    </div> <!-- end tbu -->
+	    <div data-role="page" id="chargers" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Clearwater Chargers</h1>
+       		</div>
+	    	<div data-role="content" id="chargerslist">
+	    		<!-- parse LS, add chargers games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end chargers content -->
+	    </div> <!-- end chargers -->
+	    <div data-role="page" id="fury" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Lake Wales Fury</h1>
+       		</div>
+	    	<div data-role="content" id="furylist">
+	    		<!-- parse LS, add fury games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end fury content -->
+	    </div> <!-- end fury -->
+	    <div data-role="page" id="ocu" data-add-back-btn="true">
+	    	<div data-role="header">
+       			<h1>Orlando City United</h1>
+       		</div>
+	    	<div data-role="content" id="oculist">
+	    		<!-- parse LS, add ocu games soonest first -->
+	    		<h2>404 Page not found</h2>
+	    		<p>This page is not available at this time.</p>
+	 			<div data-role="footer" data-id="myfooter" data-position="fixed">
+	 				<div data-role="navbar">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="../gold/index.html" data-ajax="false">Gold</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+	    	</div> <!-- end ocu content -->
+	    </div> <!-- end ocu -->
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    </body>
+</html>
