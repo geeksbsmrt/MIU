@@ -795,14 +795,14 @@
        		</div>
 	    	<div data-role="content" id="add">
 	    		<p>Fields marked with * are required</p>
-	    		<form action="" id="addForm">
+	    		<form id="addForm" action="" method="" >
 	    			<fieldset>
 	    				<legend>Game Information</legend>
 	    				<div data-role="fieldcontain">
-	    					<label for="gdate">*Game Date: </label><input type="date" id="gdate" name="gdate" data-mini="true" class="required" />
+	    					<label for="gdate">*Game Date: </label><input type="date" id="gdate" name="gdate" data-mini="true" class="required" data-placeholder="YYYY-MM-DD"/>
 	    				</div>
 	    				<div data-role="fieldcontain">
-	    					<label for="gtime">*Game Time: </label><input type="time" id="gtime" name="gtime" data-mini="true" class="required" />
+	    					<label for="gtime">*Game Time: </label><input type="time" id="gtime" name="gtime" data-mini="true" class="required" data-placeholder="12:30 PM"/>
 	    				</div>
 	    				<div data-role="fieldcontain">
 	    					<label for="gfield">*Game Field: </label><input type="text" id="gfield" name="gfield" data-mini="true" class="required" />
@@ -896,7 +896,7 @@
 		    			</fieldset>
 		    		</div>
 	    			<fieldset>
-	    				<input type="submit" value="Save Match" data-theme="b" />
+	    				<input type="submit" data-theme="b" name="submit" value="Save Match">
 	    				<input type="reset" value="Reset Form" class="reset" data-theme="a" />
 	    			</fieldset>
 	    		</form>

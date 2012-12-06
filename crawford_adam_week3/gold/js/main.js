@@ -12,7 +12,7 @@ $('#additem').on('pageinit', function(){
 				} else {
 					error.insertAfter(element);
 				};
-			},
+			}, // Places error outside of dropdown list
 			invalidHandler: function(form, validator) {
 
 			},
@@ -39,13 +39,13 @@ var getData = function(){
 var storeData = function(data){
 	var UUID = Math.floor(Math.random()*10000000000001),
 		values = {}; 
-	if (data.length === 20){
-		values.gcomp = false;
-	};
 	for (i=0, j=data.length; i<j; i++) {
 		var key = data[i].name,
 			val = data[i].value;
 		values[key] = val;
+	};
+	if (data.length === 20){
+		values.gcomp = false;
 	};
 	localStorage.setItem(UUID, JSON.stringify(values));
 }; 
