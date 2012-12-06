@@ -10,8 +10,8 @@
 	-webkit-background-size: cover;
 	width: auto;
 	margin-top: -20px;
-	color: goldenrod;
-	text-shadow: 1px 1px navy;
+	color: #77382B;
+	text-shadow: 1px 1px #597725;
 }
 #feature h2 {
 	margin-bottom: -10px;
@@ -20,46 +20,38 @@
 	font-weight: bold;
 }
 #addBtn {
-	background: maroon;
-	color: goldenrod;
-	text-shadow: 1px 1px black;
+	background: #7293DE;
+	color: #321199;
+	text-shadow: 1px 1px #7154CC;
 	margin: 0px 15px 20px 185px;
 }
 .ui-listview-filter {
 	margin: -15px 0px 0px 0px;
 }
-/*.ui-input-search {
-    display: inline-block;
-}*/
+.ui-field-contain {
+	border: none;
+}
 #browse {
 	margin: 0px 15px;
 }
-#add { 
-	background: url(../img/field.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-    width: auto;
+#add p { 
+	margin-top: -10px;
 }
 #add body {
     font-family: "Arial New", Arial, sans-serif;
     color: #002230;
 }
-form ul {
-    list-style: none;
+label.error {
+	display:block;
+	margin-top:10px;
+	color: #ff0000;
+	border: none;
 }
-form input, select {
-	display: block;
+.error {
+	border: 2px solid #ff0000;
 }
-form input[type=checkbox] {
-	display: inline;
-}
-form textarea {
-	display: block;
-}
-#boys, #girls {
-	display: inline;
-}
-.required {
-    outline: red solid 2px;
+input[type="radio"].error {
+	margin:0;
 }
 fieldset {
     border: hidden;
@@ -68,22 +60,6 @@ fieldset {
 legend {
     font-weight: bold;
 }
-#data > ul > li {
-	margin-bottom: 25px;
-	list-style: none;
+#adderrorslink {
+	display: none;
 }
-#errors {
-	background: red;
-	color: white;
-}
-.noListStyle {
-	list-style: none;
-	display: inline;
-	margin: 0px;
-	padding: 0px;
-}
-.slider {
-	display: inline;
-}
-a:link {color: #034661;}
-a:visited {color: #911514;}

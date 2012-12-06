@@ -34,11 +34,6 @@
 #browse {
 	margin: 0px 15px;
 }
-#add { 
-	background: url(../img/field.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-    width: auto;
-}
 #add body {
     font-family: "Arial New", Arial, sans-serif;
     color: #002230;

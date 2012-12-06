@@ -198,7 +198,7 @@ var	ageGroups = ["Select", "U6", "U8", "U10", "U12", "U14", "U18"],
 			obj.time = obj.gTime[1];
 			obj.UUID = objkey;
 			objArray.push(obj);
-			sortedArray = objArray.objSort("date", "time"); // Would this work as (obj.gDate[1], obj.gTime[1])
+			sortedArray = objArray.objSort("date", "time");
 		};
 		for (i=0,j=sortedArray.length; i<j; i++) {
 			var createLi = document.createElement("li"),
