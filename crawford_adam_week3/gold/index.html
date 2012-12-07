@@ -799,10 +799,10 @@
 	    			<fieldset>
 	    				<legend>Game Information</legend>
 	    				<div data-role="fieldcontain">
-	    					<label for="gdate">*Game Date: </label><input type="date" id="gdate" name="gdate" data-mini="true" class="required" data-placeholder="YYYY-MM-DD"/>
+	    					<label for="gdate">*Game Date: </label><input type="date" id="gdate" name="gdate" data-mini="true" class="required" placeholder="YYYY-MM-DD"/>
 	    				</div>
 	    				<div data-role="fieldcontain">
-	    					<label for="gtime">*Game Time: </label><input type="time" id="gtime" name="gtime" data-mini="true" class="required" data-placeholder="12:30 PM"/>
+	    					<label for="gtime">*Game Time: </label><input type="text" id="gtime" name="gtime" data-mini="true" class="required" placeholder="12:30 PM"/>
 	    				</div>
 	    				<div data-role="fieldcontain">
 	    					<label for="gfield">*Game Field: </label><input type="text" id="gfield" name="gfield" data-mini="true" class="required" />
@@ -896,8 +896,8 @@
 		    			</fieldset>
 		    		</div>
 	    			<fieldset>
-	    				<input type="submit" data-theme="b" name="submit" value="Save Match">
-	    				<input type="reset" value="Reset Form" class="reset" data-theme="a" />
+	    				<button type="submit" data-theme="b" name="submit" value="submit-value">Save Match</button>
+	    				<input type="reset" id="reset" value="Reset Form" class="reset" data-theme="a" />
 	    			</fieldset>
 	    		</form>
 	 			<div data-role="footer" data-id="myfooter" data-position="fixed" data-theme="c">

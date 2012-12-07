@@ -19,6 +19,8 @@ $('#additem').on('pageinit', function(){
 			submitHandler: function() {
 				var data = myForm.serializeArray();
 				storeData(data);
+				window.location = "#home";
+				window.location.reload();
 			}
 		});
 	
