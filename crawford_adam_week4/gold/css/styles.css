@@ -1,0 +1,65 @@
+/*
+ * Adam Crawford
+ * MIU 1212
+ * Week 1 
+ * 11/17/2012
+*/
+
+#feature { 
+	background: url(../img/field.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	width: auto;
+	margin-top: -20px;
+	color: #77382B;
+	text-shadow: 1px 1px #597725;
+}
+#feature h2 {
+	margin-bottom: -10px;
+}
+#feature p {
+	font-weight: bold;
+}
+#addBtn {
+	background: #7293DE;
+	color: #321199;
+	text-shadow: 1px 1px #7154CC;
+	margin: 0px 15px 20px 185px;
+}
+.ui-listview-filter {
+	margin: -15px 0px 0px 0px;
+}
+.ui-field-contain {
+	border: none;
+}
+#browse {
+	margin: 0px 15px;
+}
+#add p { 
+	margin-top: -10px;
+}
+#add body {
+    font-family: "Arial New", Arial, sans-serif;
+    color: #002230;
+}
+label.error {
+	display:block;
+	margin-top:10px;
+	color: #ff0000;
+	border: none;
+}
+.error {
+	border: 2px solid #ff0000;
+}
+input[type="radio"].error {
+	margin:0;
+}
+fieldset {
+    border: hidden;
+    padding: 0px;
+}
+legend {
+    font-weight: bold;
+}
+#adderrorslink {
+	display: none;
+}
